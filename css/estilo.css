@@ -1,0 +1,630 @@
+/* Algumas Definições */
+
+:root{
+	--ae: #7f92b7;
+	--ac: #5babdf;
+	--cin: #e7e7e7;
+}
+@font-face {
+     font-family: bebas;
+     src: url('../fonts/bebas_neue/BebasNeue.otf');
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/* Grids Básicos */
+
+.row{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: flex-start; 
+}
+.content{
+	width: 80%;
+	margin: 0 auto;	
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12{	
+	--margem:  0px;
+	  box-sizing: border-box;
+	  min-height: 100px;
+	  margin: var(--margem);	  
+}
+
+/* Definindo a largura das colunas */
+
+.col-1{width: calc(((100% * 1) / 12) - (var(--margem) * 2));}
+.col-2{width: calc(((100% * 2) / 12) - (var(--margem) * 2));}
+.col-3{width: calc(((100% * 3) / 12) - (var(--margem) * 2));}
+.col-4{width: calc(((100% * 4) / 12) - (var(--margem) * 2));}
+.col-5{width: calc(((100% * 5) / 12) - (var(--margem) * 2));}
+.col-6{width: calc(((100% * 6) / 12) - (var(--margem) * 2));}
+.col-7{width: calc(((100% * 7) / 12) - (var(--margem) * 2));}
+.col-8{width: calc(((100% * 8) / 12) - (var(--margem) * 2));}
+.col-9{width: calc(((100% * 9) / 12) - (var(--margem) * 2));}
+.col-10{width: calc(((100% * 10) / 12) - (var(--margem) * 2));}
+.col-11{width: calc(((100% * 11) / 12) - (var(--margem) * 2));}
+.col-12{width: calc(((100% * 12) / 12) - (var(--margem) * 2));}
+
+/* Header */
+
+header{
+	position: relative;
+}
+header img{
+	width: 100%;
+	z-index: -10;
+}
+header h1{
+	position: absolute;
+	font-family: 'bebas';
+	left: 18%;
+	top: 35%;
+	font-size: 3.2em;
+	font-weight: normal;
+	line-height: 1;
+	letter-spacing:-1px;
+}
+header h1 span{
+	background-color: var(--ae);	
+	color: #fff;
+	padding: 0 4px;
+} 
+
+/* Navigation */
+
+nav{
+	position: absolute;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 100;
+	width: 100%;
+	height: 55px;
+}
+.nav-box{
+	height: 8%;
+}
+nav ul{
+	list-style: none;
+	margin: 0px;
+	float: left;	
+	padding: 0;
+}
+nav ul li{
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	height: 45px;	
+}
+nav ul li a{
+	text-decoration: none;
+	color: #000;
+	padding-top: 20px;
+	padding-right: 10px; 
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-size: 80%; 
+	display: inline-block;
+}
+.selecionado{
+	background-color: var(--ac);
+	color: #fff;
+}
+nav ul li a:hover{
+	background-color: var(--ac);
+	color: #fff;
+}
+.logo{
+	float: left;
+	width: 120px;
+}
+.logo img{
+	padding-top: 5px;	
+	height: 40px
+}
+.logo span{
+	color: var(--ac);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 80%;
+	padding-left: 15px;	
+	padding-right: 15px;
+	padding-top:10px;
+	display: block;
+	float: right;
+}
+.contato{
+	float: left;
+	height: 60px;	
+	width: 120px;
+	background-color: var(--ae);
+	margin: 0;
+	margin-left: 80px;
+}
+.contato img{
+	float: left;
+	width: 35px;
+	height: 45px;
+	padding-top: 5%;
+}
+.contato a{
+	padding-top: 5%;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold; 
+	display: block;
+	float: left;
+	margin-top: 15px;
+	font-size: 70%;
+	text-decoration: none;
+}
+.socialmedia{
+	float: left;
+	width: 110px;
+}
+.socialmedia li a img{
+	width: 20px;
+	height: 20px;
+}
+
+/* Sessão quem somos nós - Sessão Metafísica :-D */
+
+.quemsomos{
+	background-color: var(--cin);
+	margin-top: -5px;
+}
+.quemsomos article,  .quemsomos figure{
+	margin-top: 15px;
+	padding: 2%; 
+}
+.quemsomos figure img{
+	z-index: 10;
+	position: relative;
+	top: -60px;
+	border-top: 15px solid var(--ac);
+	width: 100%;
+}
+.quemsomos article h2, .quemsomos article p, 
+.tratamentos article h2, .equipe h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+.quemsomos article p, .tratamentos article p{
+	width: 90%;
+	text-align: justify;	
+	font-size: 0.9em;	
+}
+.botao{
+	border: none;
+	background-color: var(--ac);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	min-height: 20px;
+	cursor: pointer;
+	outline: none;
+}
+.quemsomos article h2{
+	font-weight: normal;
+	font-size: 2em;
+	line-height: 1;
+}
+.quemsomos article h2 span,  .tratamentos article h2, .equipe h2 {
+	font-weight: 700;
+	color: var(--ae);
+}
+
+/* Sessão Tratamentos */
+
+.tratamentos{
+	background-color: #fff;
+	padding-top: 3%;
+}
+.tratamentos figure{
+	padding: 10px;
+}
+.tratamentos figure img{
+	width: 100%;
+	border-top: 15px solid var(--ac);
+}
+.tratamentos figure figcaption{
+	margin-top: -5px;	
+	padding: 1%;
+	background-color: var(--ac);
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+}
+.main-image{
+	position: relative;
+	top: -107px;
+}
+.left, .right{
+	position: relative;
+}
+.left input[type=image], .right input[type=image]{
+	position: absolute;	
+	top: 45%;
+	left: 20%;
+	right: 20%;
+}
+.tratamentos article h2, .equipe h2{
+	font-size: 2em;	
+}
+.tratamentos article p{
+ 	width: 100% !important;
+ 	padding-bottom: 3%;
+ }
+.tratamentos .tratamento-sobre{
+ 	margin-top: -100px;
+}
+
+/* Sessão Nossa Equipe */
+
+.equipe{
+	position: relative;
+}
+.equipe img, .noticias figure img{	
+	width: 100%;	
+}
+.equipe .fundoE{
+	min-height: 500px;
+}
+.equipe figure {
+	margin: 1%;
+	border-top: 15px solid var(--ac);
+}
+.equipe figure figcaption{
+	background-color: #fff;
+	margin-top: -5px;	
+	padding: 2%;
+}
+.equipe figure figcaption .nome, 
+.equipe figure figcaption .funcao{
+	display: block;
+	text-align: center;	
+	font-family: 'Open Sans', sans-serif;	
+	font-size: 0.9em;
+}
+.equipe figure figcaption .nome{
+	font-weight: bold;
+	color: var(--ac);
+}
+.equipe article{
+	position: absolute;
+	top: 0px;
+	left: 12%;
+	right: 10%;
+}
+
+/* Sessão Notícias */
+
+.noticias figure {
+	padding: 1%;
+	margin-top: -6%;
+	z-index: 10;
+	position: relative;
+}
+.noticias figure img{
+	border-top: 15px solid var(--ac);
+}
+.noticias figure figcaption{
+	background-color: var(--ac);
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	padding: 2%;
+	position: absolute;
+	bottom: 3%;
+	text-align: center;
+	width: 92%;
+	height: 30px; 
+}
+.noticias figure figcaption .manchete{	
+	font-size: 1em;
+}
+.noticias figure figcaption .data span{
+	font-size: 2.4em;
+	display: block;
+	margin-bottom: -10px;
+	margin-top: 5px;
+}
+.noticias figure figcaption .data{
+	display: block;
+	position: absolute;
+	width: 15%;
+	left: 0px;
+	bottom: 0px;	
+	height: 80px;		
+	font-weight: lighter;	
+	background-color: var(--ae);	
+}
+.center{
+	margin: 4% auto;
+}
+
+/* Sessão Contatos */
+
+#contatos{
+	position: relative;
+}
+#mapa{
+	 height: 300px; 
+	 position: relative;
+}
+#contatos .info{	
+	min-height: 315px;
+	position: absolute;
+	background-color: #000;
+	top: -5%; 
+    left: 10%; 
+  	border-top: 15px solid var(--ac);
+	background-color: #fff;	
+	-webkit-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.69);
+     box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.69);
+}
+#contatos .info div{
+	min-height: 150px;
+}
+#contatos .info .conts img{
+	width: 15%;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+#contatos .info .row:first-child span{
+	font-family: 'Open Sans', sans-serif;
+	color: var(--ac);
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+#contatos .info .tels img{
+	border-top: 1px solid var(--ac);
+	margin-top: 10px !important;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	padding-bottom: 6%;
+	height: 60px;
+}
+#contatos .info .tels span{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	color: var(--ac);
+	font-size: 0.9em;
+}
+#faleconosco{
+	background-color: var(--ac);
+	padding: 2%;
+}
+#faleconosco h2{
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 2em;	
+}
+#faleconosco form input, #faleconosco form textarea{
+	margin: 1%;
+	width: 95%;
+	border: 1px solid #000;
+	height: 30px;
+	padding: 1%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+#faleconosco form textarea{
+	resize: none;
+	margin: 1%;	
+	height: 130px;
+}
+#faleconosco form input[type=submit]{
+	color: var(--ac);
+	background-color: #fff;
+	width: 20%;
+	font-weight: bold;
+	font-style: normal;
+	margin-left: 80%;
+	cursor: pointer;
+}
+
+/* Rodapé */
+footer{
+	margin-top: 2%;
+}
+footer .blocos .bordas:first-child{
+	border-left: 0.5px solid var(--ac);
+}
+footer .blocos .bordas{
+	border-right: 1px solid var(--ac);
+}
+
+footer .fim{
+	background-color: var(--ac);
+	text-align: center;	
+}
+footer .fim .col-end{
+	min-height: 20px;	
+}
+footer .summer{
+	    margin-left: 20%;
+	    margin-top: 8%;
+}
+footer .fim span {
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: 0.8em;
+	font-weight: lighter;
+	color: #fff;
+}
+footer #rsocial img{
+	width: 40px;
+	padding: 2%;
+}
+footer #rsocial span{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: var(--ac);
+	font-weight: lighter;
+	display: block;
+	float: left;
+	width: 40%;
+	text-align: left;
+}
+
+/* Responsividade Issues */
+
+/* OK */
+@media (max-width: 1118px){
+	.socialmedia{
+		display: none;
+	}
+	.main-image{
+		top: -70px;
+	}
+	.quemsomos article{
+		margin-top: -10px;
+	}
+
+}
+/* OK */
+@media (max-width: 980px){ 
+	.contato{
+		display: none;
+	}
+
+}
+
+/* OK */
+@media (max-width: 868px){
+	.socialmedia{
+		display: none;
+	}
+}
+
+/* OK */
+@media (max-width: 730px){
+	.col-6, .quemsomos article p{
+		width: 100%;
+	}
+	footer .col-3, footer .col-6{
+		width: 100%;
+		border-left: 1px solid var(--ac);
+	}
+
+	.noticias figure{
+		margin-bottom: 8%;
+	}
+	.noticias figure  figcaption{
+		width: 94%;
+		bottom: 2.3%;
+	}
+	.noticias figure  figcaption .data{
+		bottom: -4px;
+	}
+	nav{
+		height: auto;
+	}
+	.socialmedia{
+		display: none;
+	}
+	.logo{
+		float: none;
+		margin: 0 auto;
+	}
+	header img{
+		margin-top: 15%;
+	}
+	header h1{
+		left: 14%;
+		top: 45%;
+	}
+	.quemsomos article{
+		margin-bottom: 10%;
+	}
+
+}
+/* OK */
+@media (max-width: 580px){	
+	nav ul{
+		width: 100%;
+	}
+	nav ul li{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	header img{
+		margin-top: 50%;
+	}
+	header h1{
+		left: 12%;
+		top: 64%;	
+	}
+	.quemsomos article{
+		margin-bottom: 10%;
+	}
+	nav ul li a{
+		width: 100%;
+	}
+	.tratamentos .tratamento-sobre{
+		margin-top: -40px;
+	}
+	.botao{
+		width: 100px;
+	}
+	.center{
+		margin: 5% auto;
+	}
+	.tratamentos figure figcaption{
+		font-size: 0.9em;
+	}	
+}
+@media (max-width: 480px){
+	header img{
+		margin-top: 66%;
+	}
+	header h1{
+		font-size: 2em;
+	}
+	header h1{
+		left: 13%;
+		top: 71%;	
+	}
+	.quemsomos article{
+		margin-bottom: 15%;
+	}
+	.tratamentos figure figcaption{
+		font-size: 0.7em;
+	}
+}
+
+@media (max-width: 350px){
+	header img{
+		margin-top: 95%;
+	}
+	header h1{
+		font-size: 1.5em;
+	}
+	header h1{
+		left: 14%;
+		top: 78%;	
+	}
+	.quemsomos article{
+		margin-bottom: 25%;
+	}
+	.tratamentos figure figcaption{
+		font-size: 0.48em;
+	}
+}
+@media (max-width: 270px){
+	header img{
+		margin-top: 110%;
+	}
+}
